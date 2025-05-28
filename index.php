@@ -13,3 +13,14 @@ echo getStatusMessage('success') . PHP_EOL;
 echo getStatusMessage('error') . PHP_EOL;
 echo getStatusMessage('pending') . PHP_EOL;
 echo getStatusMessage('unknown') . PHP_EOL;
+
+function calculatePrice(int|float $basePrice, int|float $discount, int|float $tax): float
+{
+    $priceAfterDiscount = $basePrice - ($basePrice * $discount / 100);
+    $finalPrice = $priceAfterDiscount + ($priceAfterDiscount * $tax / 100);
+
+    return $finalPrice;
+}
+
+echo calculatePrice(basePrice: 1000, discount: 10, tax: 5) . PHP_EOL;
+echo calculatePrice(tax: 5, discount: 10, basePrice: 2000) . PHP_EOL;
