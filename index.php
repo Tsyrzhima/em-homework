@@ -16,7 +16,7 @@ echo getStatusMessage('pending') . PHP_EOL;
 echo getStatusMessage('unknown') . PHP_EOL;
 
 // Задание 2: Использование named arguments (PHP 8.0)
-function calculatePrice(int|float $basePrice, int|float $discount, int|float $tax): float
+function calculatePrice(float $basePrice, float $discount, float $tax): float
 {
     $priceAfterDiscount = $basePrice - ($basePrice * $discount / 100);
     $finalPrice = $priceAfterDiscount + ($priceAfterDiscount * $tax / 100);
