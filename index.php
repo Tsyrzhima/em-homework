@@ -60,3 +60,24 @@ function getDeliveryMessage(OrderStatus $status): string
 echo getDeliveryMessage(OrderStatus::Pending) . PHP_EOL;
 echo getDeliveryMessage(OrderStatus::Shipped) . PHP_EOL;
 echo getDeliveryMessage(OrderStatus::Delivered) . PHP_EOL;
+
+// Задание 5: null-safe оператор (PHP 8.0)
+
+function getUserEmail(object $user): string
+{
+    return $user->profile?->email ?? 'Email не найден';
+}
+
+$user1 = (object) [
+    'profile' => (object)[
+        'email' => 'test@example.com'
+    ]
+];
+
+$user2 = (object) [
+    'profile' => null
+];
+
+echo getUserEmail($user1) . PHP_EOL;
+echo getUserEmail($user2) . PHP_EOL;
+
