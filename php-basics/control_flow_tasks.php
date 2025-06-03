@@ -15,9 +15,9 @@ function checkNumber(int|float $number): string
     }
 }
 
-echo checkNumber(10) . PHP_EOL;
-echo checkNumber(-5) . PHP_EOL;
-echo checkNumber(0) . PHP_EOL;
+echo control_flow_tasks . phpcheckNumber(10) . PHP_EOL;
+echo control_flow_tasks . phpcheckNumber(-5) . PHP_EOL;
+echo control_flow_tasks . phpcheckNumber(0) . PHP_EOL;
 
 // Задание 2: Классификация по возрасту (match)
 
@@ -32,10 +32,10 @@ function getAgeCategory(int $age): string
     };
 }
 
-echo getAgeCategory(8) . PHP_EOL;
-echo getAgeCategory(15) . PHP_EOL;
-echo getAgeCategory(30) . PHP_EOL;
-echo getAgeCategory(70) . PHP_EOL;
+echo control_flow_tasks . phpgetAgeCategory(8) . PHP_EOL;
+echo control_flow_tasks . phpgetAgeCategory(15) . PHP_EOL;
+echo control_flow_tasks . phpgetAgeCategory(30) . PHP_EOL;
+echo control_flow_tasks . phpgetAgeCategory(70) . PHP_EOL;
 
 // Задание 3: Вывод чисел (цикл for)
 
@@ -64,10 +64,10 @@ function factorial(int $n): int
     return $result;
 }
 
-echo factorial(5) . PHP_EOL;
-echo factorial(3) . PHP_EOL;
-echo factorial(1) . PHP_EOL;
-echo factorial(0) . PHP_EOL;
+echo control_flow_tasks . phpfactorial(5) . PHP_EOL;
+echo control_flow_tasks . phpfactorial(3) . PHP_EOL;
+echo control_flow_tasks . phpfactorial(1) . PHP_EOL;
+echo control_flow_tasks . phpfactorial(0) . PHP_EOL;
 
 // Задание 5: Обход массива (foreach)
 

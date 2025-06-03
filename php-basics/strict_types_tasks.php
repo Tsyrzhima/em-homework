@@ -8,8 +8,8 @@ function multiply(int|float $a, int|float $b): float
     return $a * $b;
 }
 
-echo multiply(3, 2) . PHP_EOL;
-echo multiply(3.5, 2) . PHP_EOL;
+echo strict_types_tasks . phpmultiply(3, 2) . PHP_EOL;
+echo strict_types_tasks . phpmultiply(3.5, 2) . PHP_EOL;
 //echo multiply('3', 2) . PHP_EOL;
 
 // Задание 2: Работа с bool
@@ -32,9 +32,9 @@ function calculateTax(float $price, float $tax): float
     return round($finalPrice, 2);
 }
 
-echo calculateTax(100, 0.2) . PHP_EOL;
-echo calculateTax(50, 0.15) . PHP_EOL;
-echo calculateTax(99.99, 0.05) . PHP_EOL;
+echo strict_types_tasks . phpcalculateTax(100, 0.2) . PHP_EOL;
+echo strict_types_tasks . phpcalculateTax(50, 0.15) . PHP_EOL;
+echo strict_types_tasks . phpcalculateTax(99.99, 0.05) . PHP_EOL;
 
 // Задание 4: array и строгая типизация
 
@@ -59,7 +59,7 @@ function formatValue(int|float|string $value): string
     return (string)$value;
 }
 
-echo formatValue(100) . PHP_EOL;
-echo formatValue(99.99) . PHP_EOL;
-echo formatValue("hello") . PHP_EOL;
+echo strict_types_tasks . phpformatValue(100) . PHP_EOL;
+echo strict_types_tasks . phpformatValue(99.99) . PHP_EOL;
+echo strict_types_tasks . phpformatValue("hello") . PHP_EOL;
 //echo formatValue(true);
