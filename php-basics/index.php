@@ -10,10 +10,10 @@ function getStatusMessage(string $status): string
         default   => 'Неизвестный статус',
     };
 }
-echo getStatusMessage('success') . PHP_EOL;
-echo getStatusMessage('error') . PHP_EOL;
-echo getStatusMessage('pending') . PHP_EOL;
-echo getStatusMessage('unknown') . PHP_EOL;
+echo index . phpgetStatusMessage('success') . PHP_EOL;
+echo index . phpgetStatusMessage('error') . PHP_EOL;
+echo index . phpgetStatusMessage('pending') . PHP_EOL;
+echo index . phpgetStatusMessage('unknown') . PHP_EOL;
 
 // Задание 2: Использование named arguments (PHP 8.0)
 function calculatePrice(float $basePrice, float $discount, float $tax): float
@@ -24,8 +24,8 @@ function calculatePrice(float $basePrice, float $discount, float $tax): float
     return $finalPrice;
 }
 
-echo calculatePrice(basePrice: 1000, discount: 10, tax: 5) . PHP_EOL;
-echo calculatePrice(tax: 5, discount: 10, basePrice: 2000) . PHP_EOL;
+echo index . phpcalculatePrice(basePrice: 1000, discount: 10, tax: 5) . PHP_EOL;
+echo index . phpcalculatePrice(tax: 5, discount: 10, basePrice: 2000) . PHP_EOL;
 
 // Задание 3: readonly свойства в классах (PHP 8.1)
 class User
@@ -57,9 +57,9 @@ function getDeliveryMessage(OrderStatus $status): string
     return $status->value;
 }
 
-echo getDeliveryMessage(OrderStatus::Pending) . PHP_EOL;
-echo getDeliveryMessage(OrderStatus::Shipped) . PHP_EOL;
-echo getDeliveryMessage(OrderStatus::Delivered) . PHP_EOL;
+echo index . phpgetDeliveryMessage(OrderStatus::Pending) . PHP_EOL;
+echo index . phpgetDeliveryMessage(OrderStatus::Shipped) . PHP_EOL;
+echo index . phpgetDeliveryMessage(OrderStatus::Delivered) . PHP_EOL;
 
 // Задание 5: null-safe оператор (PHP 8.0)
 
@@ -78,6 +78,6 @@ $user2 = (object) [
     'profile' => null
 ];
 
-echo getUserEmail($user1) . PHP_EOL;
-echo getUserEmail($user2) . PHP_EOL;
+echo index . phpgetUserEmail($user1) . PHP_EOL;
+echo index . phpgetUserEmail($user2) . PHP_EOL;
 
