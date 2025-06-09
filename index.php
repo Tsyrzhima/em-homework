@@ -10,9 +10,12 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use App\Models\User; // используем use для сокращения
-use App\Services\UserService; // используем use для сокращения
-use App\Models\Order;
+use oop\Models\Order;
+use oop\Models\User;
+use oop\Services\UserService;
+
+// используем use для сокращения
+// используем use для сокращения
 
 $user = new User("Иван");
 echo $user->getName() . PHP_EOL;

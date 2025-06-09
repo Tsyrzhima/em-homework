@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 // Задание 1: Использование namespace в классе
 
-namespace App\Models;
+namespace oop\Models;
 class User
 {
     private string $name;

@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 // Задание 3: Использование нескольких пространств имен
 
-namespace App\Services;
+namespace oop\Services;
 
-use App\Models\User; // используем use для сокращения
+use oop\Models\User;
+
+// используем use для сокращения
 
 class UserService
 {
