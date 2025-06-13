@@ -1,7 +1,6 @@
 <?php
 error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
 
-use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\ORMSetup;
 use Doctrine\ORM\EntityManager;
 
@@ -13,14 +12,12 @@ $config = ORMSetup::createAttributeMetadataConfiguration(
 );
 
 $conn = [
-    'dbname'   => 'my_database',
+    'driver'   => 'pdo_mysql',
+    'host'     => '127.0.0.1',
+    'dbname'   => 'symfony_db',
     'user'     => 'testuser',
     'password' => 'secret',
-    'host'     => 'localhost',
-    'driver'   => 'pdo_mysql',
+    'charset'  => 'utf8mb4',
 ];
 
-$connection = DriverManager::getConnection($conn, $config);
-$entityManager = new EntityManager($connection, $config);
-
-return $entityManager;
+return EntityManager::create($conn, $config);

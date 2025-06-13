@@ -1,6 +1,6 @@
 <?php
 
-namespace php-data\entities-data\entities;
+namespace data\doctrine\entities;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -11,7 +11,7 @@ use data\doctrine\repositories\UserRepository;
 #[ORM\Table(name: "users")]
 class User
 {
-    private Collection $post;
+    private Collection $posts;
     public function __construct()
     {
         $this->posts = new ArrayCollection();

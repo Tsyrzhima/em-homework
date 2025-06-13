@@ -1,13 +1,9 @@
 <?php
 
-namespace php-data\entities-data\entities;
+namespace data\doctrine\entities;
 
 use Doctrine\ORM\Mapping as ORM;
-use phpuse;
 
-phpuse phpuse phpuse phpuse;
-
-phpuse phpuse php
 
 #[ORM\Entity]
 #[ORM\Table(name: "posts")]
