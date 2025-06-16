@@ -6,25 +6,151 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit4c05dadfce7728852face8c2bf227ab1
 {
+    public static $files = array (
+        'ad155f8f1cf0d418fe49e248db8c661b' => __DIR__ . '/..' . '/react/promise/src/functions_include.php',
+        'ebf8799635f67b5d7248946fe2154f4a' => __DIR__ . '/..' . '/ringcentral/psr7/src/functions_include.php',
+        'cea474b4340aa9fa53661e887a21a316' => __DIR__ . '/..' . '/react/promise-stream/src/functions_include.php',
+        'b33e3d135e5d9e47d845c576147bda89' => __DIR__ . '/..' . '/php-di/php-di/src/functions.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
-        'o' => 
+        'R' => 
         array (
-            'oop\\' => 4,
+            'RingCentral\\Psr7\\' => 17,
+            'React\\Stream\\' => 13,
+            'React\\Socket\\' => 13,
+            'React\\Promise\\Stream\\' => 21,
+            'React\\Promise\\' => 14,
+            'React\\Http\\' => 11,
+            'React\\HttpClient\\' => 17,
+            'React\\EventLoop\\' => 16,
+            'React\\Dns\\' => 10,
+            'React\\Cache\\' => 12,
         ),
-        'd' => 
+        'P' => 
         array (
-            'data\\' => 5,
+            'Psr\\Http\\Message\\' => 17,
+            'Psr\\Container\\' => 14,
+        ),
+        'O' => 
+        array (
+            'Oop\\' => 4,
+        ),
+        'L' => 
+        array (
+            'Laravel\\SerializableClosure\\' => 28,
+        ),
+        'I' => 
+        array (
+            'Invoker\\' => 8,
+        ),
+        'F' => 
+        array (
+            'Fig\\Http\\Message\\' => 17,
+        ),
+        'E' => 
+        array (
+            'Evenement\\' => 10,
+        ),
+        'D' => 
+        array (
+            'Data\\' => 5,
+            'DI\\' => 3,
+        ),
+        'C' => 
+        array (
+            'Clue\\React\\Buzz\\' => 16,
+        ),
+        'A' => 
+        array (
+            'Architecture\\' => 13,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'oop\\' => 
+        'RingCentral\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ringcentral/psr7/src',
+        ),
+        'React\\Stream\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/stream/src',
+        ),
+        'React\\Socket\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/socket/src',
+        ),
+        'React\\Promise\\Stream\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/promise-stream/src',
+        ),
+        'React\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/promise/src',
+        ),
+        'React\\Http\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/http/src',
+        ),
+        'React\\HttpClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/http-client/src',
+        ),
+        'React\\EventLoop\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/event-loop/src',
+        ),
+        'React\\Dns\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/dns/src',
+        ),
+        'React\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/cache/src',
+        ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Oop\\' => 
         array (
             0 => __DIR__ . '/../..' . '/php-oop/src',
         ),
-        'data\\' => 
+        'Laravel\\SerializableClosure\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/serializable-closure/src',
+        ),
+        'Invoker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-di/invoker/src',
+        ),
+        'Fig\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fig/http-message-util/src',
+        ),
+        'Evenement\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/evenement/evenement/src',
+        ),
+        'Data\\' => 
         array (
             0 => __DIR__ . '/../..' . '/php-data/src',
+        ),
+        'DI\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-di/php-di/src',
+        ),
+        'Clue\\React\\Buzz\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/clue/buzz-react/src',
+        ),
+        'Architecture\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/php-architecture/src',
         ),
     );
 

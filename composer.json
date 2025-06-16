@@ -1,8 +1,17 @@
 {
   "autoload": {
     "psr-4": {
-      "oop\\": "php-oop/src/",
-      "data\\": "php-data/src/"
+      "Oop\\": "php-oop/src/",
+      "Data\\": "php-data/src/",
+      "Architecture\\": "php-architecture/src/"
     }
+  },
+  "require": {
+    "ext-pdo": "*",
+    "php-di/php-di": "^7.0",
+    "react/event-loop": "^1.5",
+    "react/http": "^1.11",
+    "react/http-client": "^0.5.11",
+    "clue/buzz-react": "^2.9"
   }
 }
