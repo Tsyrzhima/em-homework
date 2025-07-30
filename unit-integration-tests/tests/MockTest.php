@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\tests;
+namespace tests;
 
 use Mockery\Mock;
 use PHPUnit\Framework\TestCase;
