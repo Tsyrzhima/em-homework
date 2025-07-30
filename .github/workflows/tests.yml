@@ -26,4 +26,4 @@ jobs:
         run: ls -la
 
       - name: Run PHPUnit
-        run: vendor/bin/phpunit
+        run: vendor/bin/pest
