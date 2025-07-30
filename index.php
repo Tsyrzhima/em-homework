@@ -2,26 +2,22 @@
 
 declare(strict_types=1);
 
-//require 'src/Models/User.php'; // Задача 1
+// Задание 5: Тестирование API (интеграционные тесты)
 
-// Задание 2: Автозагрузка через Composer
-// Задание 4: Использование use для сокращения пути
+$users = [
+    ['firstname' => 'Ivan', 'lastname' => 'Ivanov'],
+    ['firstname' => 'Petr', 'lastname' => 'Petrov']
+];
 
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-require 'vendor/autoload.php';
+header('Content-Type: application/json; charset=utf-8');
 
-use oop\Models\Order;
-use oop\Models\User;
-use oop\Services\UserService;
-
-// используем use для сокращения
-// используем use для сокращения
-
-$user = new User("Иван");
-echo $user->getName() . PHP_EOL;
-
-$service = new UserService();
-echo $service->getUserGreeting("Олег") . PHP_EOL;
-
-$order = new Order();
-$order->log("Заказ создан");
+if ($uri === '/users') {
+    echo json_encode($users);
+    http_response_code(200);
+}else
+{
+    http_response_code(404);
+    echo json_encode(['error' => 'Not Found']);
+}

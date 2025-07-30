@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Tests\\tests\\ApiTest::testUserApiReturnsUsers":7,"Tests\\tests\\MockTest::testMock":8},"times":{"Tests\\tests\\UserTest::testCreateUser":0.001,"Tests\\tests\\UserTest::testUserCanBeCreated":0,"Tests\\tests\\UserTest::testUserFullName":0,"Tests\\tests\\ApiTest::testUserApiReturnsUsers":0.002,"Tests\\tests\\MockTest::testMock":0.004}}

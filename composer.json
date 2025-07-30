@@ -1,9 +1,7 @@
 {
   "autoload": {
     "psr-4": {
-      "Oop\\": "php-oop/src/",
-      "Data\\": "php-data/src/",
-      "Architecture\\": "php-architecture/src/"
+      "Tests\\": "unit-integration-tests/src/"
     }
   },
   "require": {
@@ -15,5 +13,15 @@
     "clue/buzz-react": "^2.9",
     "predis/predis": "^3.0",
     "php-amqplib/php-amqplib": "^3.7"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.5",
+    "pestphp/pest": "^3.8",
+    "mockery/mockery": "^1.6"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": false
+    }
   }
 }
