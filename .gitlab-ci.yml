@@ -4,8 +4,10 @@ stages:
 test:
   image: php:8.2
   before_script:
-    - apt-get update && apt-get install -y unzip
+    - apt-get update && apt-get install -y unzip git
+    - docker-php-ext-install pdo pdo_mysql mbstring
     - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-    - php composer.phar install
+    - composer install
+    - chmod +x vendor/bin/pest
   script:
     - vendor/bin/pest
