@@ -13,5 +13,5 @@ test:
 
   script:
     - set +e
-    - ./vendor/bin/pest --ci || pest_status=$?
+    - ./vendor/bin/pest || pest_status=$?
     - exit $pest_status
