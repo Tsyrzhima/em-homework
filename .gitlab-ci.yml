@@ -11,4 +11,6 @@ test:
     - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
     - composer install --no-interaction --prefer-dist
   script:
-    - ./vendor/bin/pest --ci || true
+    - set +e
+    - ./vendor/bin/pest --ci || pest_status=$?
+    - exit $pest_status
