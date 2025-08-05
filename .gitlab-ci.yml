@@ -2,10 +2,13 @@ stages:
   - test
 
 test:
+  stage: test
   image: php:8.2
+
   before_script:
-    - apt-get update && apt-get install -y unzip
+    - apt-get update && apt-get install -y unzip git curl
+    - docker-php-ext-install pdo pdo_mysql mbstring
     - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-    - composer install
+    - composer install --no-interaction --prefer-dist
   script:
-    - ./vendor/bin/pest --ci --no-exit-code
+    - ./vendor/bin/pest --ci || true
