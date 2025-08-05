@@ -6,8 +6,8 @@ test:
   image: php:8.3
 
   before_script:
-    - apt-get update && apt-get install -y unzip libonig-dev
-    - echo "extension=sockets" > /usr/local/etc/php/conf.d/sockets.ini
+    - apt-get update && apt-get install -y unzip libonig-dev gcc make autoconf libc-dev pkg-config
+    - docker-php-ext-install sockets || (cat /usr/local/etc/php/docker-php-ext-sockets.log && false)
     - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
     - composer update --no-interaction --prefer-dist
 
