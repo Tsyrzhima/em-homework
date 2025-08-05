@@ -9,7 +9,7 @@ test:
     - apt-get update && apt-get install -y unzip libonig-dev
     - docker-php-ext-install pdo pdo_mysql mbstring
     - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-    - composer install --no-interaction --prefer-dist
+    - composer update --no-interaction --prefer-dist
   script:
     - set +e
     - ./vendor/bin/pest --ci || pest_status=$?
