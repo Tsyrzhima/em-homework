@@ -6,8 +6,27 @@ on:
       - feature/homework-5
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, pdo, pdo_mysql
+
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist
+
+      - name: Run Tests
+        run: vendor/bin/pest
+
   deploy:
     runs-on: ubuntu-latest
+    needs: test
+    if: success()
 
     steps:
       - name: Checkout репозитория
@@ -23,4 +42,4 @@ jobs:
             cd /var/www/myproject
             git pull origin feature/homework-5
             composer install --no-dev
-            sudo systemctl restart php-fpm
+            sudo systemctl restart php8.2-fpm.service
