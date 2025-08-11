@@ -12,3 +12,13 @@ git push origin feature/homework-5
 # Ответ
 
 https://github.com/Tsyrzhima/em-homework/actions/runs/16619043397/job/47018681950
+
+# коммит и push
+
+git add .github/workflows/deploy.yml
+git commit -m "Деплой"
+git push origin feature/homework-5
+
+# Ответ
+
+https://github.com/Tsyrzhima/em-homework/actions/runs/16847334337
